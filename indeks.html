@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Undangan Reuni Alumni</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =========================
+         HALAMAN PEMBUKA
+    ========================== -->
+
+    <section class="cover" id="cover">
+
+        <div class="cover-overlay"></div>
+
+        <div class="cover-content">
+
+            <p class="small-title">UNDANGAN REUNI</p>
+
+            <h1>
+                Alumni<br>
+                Angkatan 2024
+            </h1>
+
+            <p class="school-name">
+                SMA NEGERI 3 GU
+            </p>
+
+            <div class="cover-line"></div>
+
+            <p class="guest-text">
+                Kepada Yth.
+            </p>
+
+            <h2 class="guest-name">
+                Teman-teman Alumni
+            </h2>
+
+            <button class="open-button" onclick="openInvitation()">
+                Buka Undangan
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         NAVIGASI
+    ========================== -->
+
+    <nav class="navbar" id="navbar">
+
+        <div class="nav-logo">
+            REUNI
+        </div>
+
+        <div class="nav-links">
+
+            <a href="#home">Beranda</a>
+            <a href="#acara">Acara</a>
+            <a href="#galeri">Galeri</a>
+            <a href="#lokasi">Lokasi</a>
+            <a href="#konfirmasi">Konfirmasi</a>
+
+        </div>
+
+        <button class="music-button" onclick="toggleMusic()">
+            ♪
+        </button>
+
+    </nav>
+
+
+    <main id="main-content">
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="hero section" id="home">
+
+            <div class="container">
+
+                <p class="section-label">
+                    MARI BERSILATURAHMI KEMBALI
+                </p>
+
+                <h2>
+                    Satu Kenangan,<br>
+                    Banyak Cerita
+                </h2>
+
+                <p class="description">
+                    Setelah sekian lama berpisah, kini saatnya kita
+                    kembali berkumpul, mengenang masa sekolah,
+                    berbagi cerita dan mempererat kembali tali
+                    persaudaraan.
+                </p>
+
+                <div class="ornament">
+                    ✦
+                </div>
+
+                <p class="quote">
+                    "Teman boleh terpisah oleh jarak dan waktu,
+                    tetapi kenangan akan selalu menyatukan kita."
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROFIL SEKOLAH
+        ========================== -->
+
+        <section class="school section">
+
+            <div class="container two-column">
+
+                <div class="image-box">
+
+                    <img
+                        src="images/gambar (2).jpeg"
+                        alt="Gedung sekolah"
+                    >
+
+                </div>
+
+                <div class="text-box">
+
+                    <p class="section-label">
+                        TENTANG KITA
+                    </p>
+
+                    <h2>
+                        SMA Negeri 3 GU
+                    </h2>
+
+                    <p>
+                        Bertahun-tahun telah berlalu sejak kita
+                        meninggalkan bangku sekolah. Banyak hal
+                        yang berubah, tetapi kenangan bersama
+                        teman-teman tetap menjadi bagian yang
+                        berharga dalam perjalanan hidup kita.
+                    </p>
+
+                    <p>
+                        Mari kita luangkan waktu untuk kembali
+                        bertemu dan menghidupkan kembali cerita
+                        indah masa sekolah.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DETAIL ACARA
+        ========================== -->
+
+        <section class="event section" id="acara">
+
+            <div class="container">
+
+                <p class="section-label">
+                    SAVE THE DATE
+                </p>
+
+                <h2>
+                    Detail Acara
+                </h2>
+
+                <div class="event-card">
+
+                    <div class="event-item">
+
+                        <span class="event-icon">📅</span>
+
+                        <h3>
+                            Sabtu
+                        </h3>
+
+                        <p>
+                            1 Oktober 2026
+                        </p>
+
+                    </div>
+
+                    <div class="event-item">
+
+                        <span class="event-icon">⏰</span>
+
+                        <h3>
+                            Waktu
+                        </h3>
+
+                        <p>
+                            19.00 WITA - Selesai
+                        </p>
+
+                    </div>
+
+                    <div class="event-item">
+
+                        <span class="event-icon">👔</span>
+
+                        <h3>
+                            Dress Code
+                        </h3>
+
+                        <p>
+                            Bebas & Sopan
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             COUNTDOWN
+        ========================== -->
+
+        <section class="countdown-section">
+
+            <div class="container">
+
+                <p class="section-label">
+                    MENUJU HARI REUNI
+                </p>
+
+                <h2>
+                    Hitung Mundur
+                </h2>
+
+               <div class="countdown">
+
+    <div class="count-box">
+        <span id="days">00</span>
+        <small>Hari</small>
+    </div>
+
+    <div class="count-box">
+        <span id="hours">00</span>
+        <small>Jam</small>
+    </div>
+
+    <div class="count-box">
+        <span id="minutes">00</span>
+        <small>Menit</small>
+    </div>
+
+    <div class="count-box">
+        <span id="seconds">00</span>
+        <small>Detik</small>
+    </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DRESS CODE
+        ========================== -->
+
+        <section class="dress section">
+
+            <div class="container">
+
+                <p class="section-label">
+                    DRESS CODE
+                </p>
+
+                <h2>
+                    Pakaian Reuni
+                </h2>
+
+                <p class="description">
+                    Gunakan pakaian yang nyaman dan sopan.
+                    Anda juga dapat menggunakan warna atau
+                    atribut yang mengingatkan kita pada masa sekolah.
+                </p>
+
+                <div class="dress-box">
+
+                    <div class="dress-color"></div>
+
+                    <h3>
+                        Bebas & Sopan
+                    </h3>
+
+                    <p>
+                        Gunakan pakaian terbaik Anda
+                        untuk malam penuh kenangan.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             LOKASI
+        ========================== -->
+
+        <section class="location section" id="lokasi">
+
+            <div class="container">
+
+                <p class="section-label">
+                    LOKASI ACARA
+                </p>
+
+                <h2>
+                    Tempat Reuni
+                </h2>
+
+                <div class="location-card">
+
+                    <div class="location-info">
+
+                        <h3>
+                            gedung SMAN 3 GU
+                        </h3>
+
+                        <p>
+                            Jl.migneau,
+                            lakapera,
+                            Sulawesi tenggara
+                        </p>
+
+                        <a
+                            href="https://www.google.com/maps/place/SMA+NEGERI+3+GU/@-5.2052223,122.528623,18.38z/data=!4m6!3m5!1s0x2da39b0356689ca3:0xe219dee96e29bca5!8m2!3d-5.2056052!4d122.5286062!16s%2Fg%2F11gmxyjk_3?entry=ttu&g_ep=EgoyMDI2MDkyOC4wIKXMDSoASAFQAw%3D%3D"
+                            target="_blank"
+                            class="map-button"
+                        >
+                            Buka Google Maps
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             GALERI
+        ========================== -->
+
+        <section class="gallery section" id="galeri">
+
+            <div class="container">
+
+                <p class="section-label">
+                    GALERI KENANGAN
+                </p>
+
+                <h2>
+                    Masa yang Tak Terlupakan
+                </h2>
+
+                <div class="gallery-grid">
+
+                    <div class="gallery-item">
+                        <img
+                            src="images/gambar (3).jpeg"
+                            alt="Kenangan alumni"
+                        >
+                    </div>
+
+                    
+                    <div class="gallery-item">
+                        <img
+                            src="images/gambar (5).jpeg"
+                            alt="Kenangan alumni"
+                        >
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="images/gambar (4).jpeg"
+                            alt="Kenangan alumni"
+                        >
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="images/gambar (7).jpeg"
+                            alt="Kenangan alumni"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             KONFIRMASI
+        ========================== -->
+
+        <section class="confirmation section" id="konfirmasi">
+
+            <div class="container">
+
+                <p class="section-label">
+                    KONFIRMASI KEHADIRAN
+                </p>
+
+                <h2>
+                    Apakah Kamu Hadir?
+                </h2>
+
+                <p class="description">
+                    Silakan konfirmasi kehadiran agar panitia
+                    dapat mempersiapkan acara dengan lebih baik.
+                </p>
+
+                <div class="confirmation-buttons">
+
+                    <button
+                        class="present-button"
+                        onclick="confirmAttendance('Hadir')"
+                    >
+                        ✓ Saya Akan Hadir
+                    </button>
+
+                    <button
+                        class="absent-button"
+                        onclick="confirmAttendance('Tidak Hadir')"
+                    >
+                        Saya Tidak Bisa Hadir
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             UCAPAN
+        ========================== -->
+
+        <section class="message section">
+
+            <div class="container">
+
+                <p class="section-label">
+                    UCAPAN
+                </p>
+
+                <h2>
+                    Sampai Jumpa!
+                </h2>
+
+                <p class="description">
+                    Kehadiran dan doa baik dari teman-teman
+                    adalah kebahagiaan bagi kami.
+                </p>
+
+                <div class="ornament">
+                    ✦
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <h3>
+            REUNI ALUMNI
+        </h3>
+
+        <p>
+            SMA Negeri 3
+        </p>
+
+        <p class="footer-small">
+            Dibuat dengan penuh kenangan ❤️
+        </p>
+
+    </footer>
+
+
+    <!-- MUSIK -->
+
+   <audio id="backgroundMusic" loop>
+    <source src="music/satu.mp4" type="audio/mpeg">
+</audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
