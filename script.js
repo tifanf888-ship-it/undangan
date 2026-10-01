@@ -52,6 +52,28 @@ function toggleMusic() {
 
 
 /* =================================
+   KONFIRMASI KEHADIRAN
+================================= */
+
+function confirmAttendance(attendance) {
+
+    const messages = {
+        "Hadir": "Halo, saya mengonfirmasi bahwa saya akan hadir di acara reuni SMA Negeri 3 GU.",
+        "Tidak Hadir": "Halo, mohon maaf saya mengonfirmasi bahwa saya tidak bisa hadir di acara reuni SMA Negeri 3 GU."
+    };
+
+    const message = messages[attendance];
+
+    if (!message) {
+        return;
+    }
+
+    const whatsappUrl = `https://wa.me/6280228379054?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+}
+
+
+/* =================================
    COUNTDOWN REUNI
 ================================= */
 
