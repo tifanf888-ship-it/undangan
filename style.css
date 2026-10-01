@@ -78,11 +78,8 @@ h2 {
 .cover {
     min-height: 100vh;
 
-    background-image:
-        url("images/gambar (6).jpeg");
-
-    background-size: cover;
-    background-position: center;
+    background-image: none;
+    overflow: hidden;
 
     position: relative;
 
@@ -99,6 +96,16 @@ h2 {
     position: absolute;
     inset: 0;
     background: rgba(25, 25, 25, 0.65);
+    z-index: 1;
+}
+
+.cover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: url("gambar (6).jpeg") center / cover no-repeat;
+    animation: cover-zoom 10s ease-in-out infinite alternate;
 }
 
 .cover-content {
@@ -265,6 +272,19 @@ h2 {
     height: 450px;
     object-fit: cover;
     border-radius: 8px;
+    object-position: center;
+    animation: photo-zoom 8s ease-in-out infinite alternate;
+    transition: transform 0.7s ease;
+}
+
+.image-box {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.image-box:hover img {
+    animation: none;
+    transform: scale(1.08);
 }
 
 .text-box p {
@@ -443,11 +463,50 @@ h2 {
 .gallery-item img {
     height: 350px;
     object-fit: cover;
-    transition: 0.5s;
+    object-position: center;
+    animation: photo-zoom 8s ease-in-out infinite alternate;
+    transition: transform 0.7s ease;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.05);
+    animation: none;
+    transform: scale(1.08);
+}
+
+.gallery-item:nth-child(even) img {
+    animation-delay: -6s;
+}
+
+@keyframes photo-zoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+}
+
+@keyframes cover-zoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cover::before {
+        animation: none;
+    }
+
+    .image-box img,
+    .gallery-item img {
+        animation: none;
+        transition: none;
+    }
 }
 
 
