@@ -68,7 +68,7 @@ function confirmAttendance(attendance) {
         return;
     }
 
-    const whatsappUrl = `https://wa.me/6280228379054?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/082228379054?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
 }
 
